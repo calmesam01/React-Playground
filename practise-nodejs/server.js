@@ -13,11 +13,17 @@ const server = http.createServer((req, res) => {
     };
     switch (req.url) {
         case "/":
+            res.statusCode = 200;
             sendData("./views/index.html");
+            break;
         case "/about":
+            res.statusCode = 200;
             sendData("./views/about.html");
+            break;
         default:
+            res.statusCode = 404;
             sendData("./views/404.html");
+            break;
     }
 })
 
