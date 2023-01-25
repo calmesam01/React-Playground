@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200;
             sendData("./views/about.html");
             break;
-        default:
+        default: 
             res.statusCode = 404;
             sendData("./views/404.html");
             break;
